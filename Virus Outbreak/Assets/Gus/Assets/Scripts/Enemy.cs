@@ -58,6 +58,9 @@ public class Enemy : MonoBehaviour {
             Destroy(collision.gameObject); // this destroys projectile
             /*
              * Add 100 points to the score for destroying an enemy
+             * 
+             * 
+             * TESTING!!!!!!!!!
              */
         }
     }

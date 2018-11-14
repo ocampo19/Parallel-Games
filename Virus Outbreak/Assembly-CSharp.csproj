@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Carlos\PlayerController.cs" />
     <Compile Include="Assets\Gus\Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Gus\Assets\Scripts\PlayerMovement.cs" />
     <None Include="Assets\Ariel\README.txt" />
