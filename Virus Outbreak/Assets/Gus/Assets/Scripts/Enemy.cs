@@ -50,11 +50,15 @@ public class Enemy : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Enemy collides with 'collision' variable
-        Debug.Log("Hit by " + collision.name);
+        //Debug.Log("Hit by " + collision.name);
 
         if(collision.gameObject.name == "Projectile(Clone)")
         {
-            Destroy(collision.gameObject); // this would destroy the projectile if it collides with enemy
+            Destroy(gameObject);           // this destroys the enemy
+            Destroy(collision.gameObject); // this destroys projectile
+            /*
+             * Add 100 points to the score for destroying an enemy
+             */
         }
     }
 }
