@@ -9,17 +9,15 @@ public class PlayerMovement : MonoBehaviour
     private KeyCode moveLeft;
     private KeyCode moveRight;
     [SerializeField] [Range(0, 50)] private float speed = 0;
-    // private Rigidbody rb;
-    public float projectileVelocity;
-    public GameObject projectile;
-    public float screenTop;
-    public float screenBottom;
-    public float screenLeft;
-    public float screenRight;
+
+    // variables are used for screen wrapping
+    public float screenTop;       // top edge of screen before game objects are out of camera view
+    public float screenBottom;   // bottom edge
+    public float screenLeft;    // left edge
+    public float screenRight;  // right edge
 
     void Awake()
     {
-        //rb = GetComponent<Rigidbody>();
         moveForward = KeyCode.W;
         moveBackward = KeyCode.S;
         moveLeft = KeyCode.A;
@@ -29,14 +27,6 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Movement();
-
-        // check for input from the fire key and make projectiles
-        if(Input.GetButtonDown("Fire1"))
-        {
-            GameObject newProjectile = Instantiate(projectile, transform.position, transform.rotation);
-            newProjectile.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.up * projectileVelocity * Time.deltaTime);
-            Destroy(newProjectile, 1.6f);
-        }
 
         //Screen Wraping
         Vector2 newPosition = transform.position;
@@ -79,17 +69,5 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.Translate(Vector3.right * speed * Time.deltaTime);
         }
-    }
-
-    private void OnCollisionEnter2D(Collision2D enemy)
-    {
-        Debug.Log("hit");
-
-        /*
-         * Player collides with enemy
-         * subtract player life by calling function from Health script
-         */
-
-
     }
 }

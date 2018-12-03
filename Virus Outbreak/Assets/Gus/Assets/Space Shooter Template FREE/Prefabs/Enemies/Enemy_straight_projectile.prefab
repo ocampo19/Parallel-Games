@@ -22,7 +22,8 @@ GameObject:
   - component: {fileID: 212742557042598518}
   - component: {fileID: 50960667213413408}
   - component: {fileID: 58425179734721642}
-  - component: {fileID: 114259497030339138}
+  - component: {fileID: 114754919977712542}
+  - component: {fileID: 114874893100441226}
   m_Layer: 0
   m_Name: Enemy_straight_projectile
   m_TagString: Enemy
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1373690366928948}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.06, y: 7.65, z: 0}
+  m_LocalPosition: {x: -1.9, y: 5.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -78,7 +79,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &114259497030339138
+--- !u!114 &114754919977712542
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,13 +90,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48fbea7e572f0ca42932dfdcc9a4b00e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxThrust: 200
-  maxSpin: 0
-  rb: {fileID: 50960667213413408}
-  screenTop: 13.5
-  screenBottom: -13.6
-  screenLeft: -11.5
-  screenRight: 11
+  health: 1
+--- !u!114 &114874893100441226
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1373690366928948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 116c346ed23c5b54bb5a9b388768ce1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ExtraLife: {fileID: 1552100119640676, guid: c91c8eba802616b4fa1bf55876259c13, type: 2}
+  Projectile_orange: {fileID: 1151999131229068, guid: 84e665fc16025df4f8b204136c69fa00,
+    type: 2}
+  Projectile_blue: {fileID: 1501245831397054, guid: debeb5a7384edcc4cbc3f5e2bc760259,
+    type: 2}
 --- !u!212 &212742557042598518
 SpriteRenderer:
   m_ObjectHideFlags: 1
