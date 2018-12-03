@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+  - enabled: 0
+    path: Assets/Main/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Ariel/Assets/Scenes/Menu.unity
+    guid: 210388986872f6a4e96ca1bbde83fb7b
+  - enabled: 1
+    path: Assets/Ariel/Assets/Scenes/Game.unity
+    guid: 73ec9c709d615cd478b926399e856e8e
   m_configObjects: {}
